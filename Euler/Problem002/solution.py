@@ -8,4 +8,14 @@ four million, find the sum of the even-valued terms.'''
 
 previous_num = 1
 next_num = 2
-sum = 3
+sum = 2
+
+upper_limit = 4000000
+
+while next_num < upper_limit:
+    next_num = next_num + previous_num
+    previous_num = next_num - previous_num
+    if next_num % 2 == 0:
+        sum += next_num
+
+print(sum)
